@@ -112,6 +112,8 @@
         }
 
         #titulo{}
+        #mensagem{ font-size: 25px;}
+
 </style>
 
 </head>
@@ -126,20 +128,25 @@
     <div id="networkList">
    <h2 id="netw"></h2>
 
-
+  
     </div>
-
+    <span id="mensagem"></span>
     <script>
         const ti = 'NETSTAT';    
         const textDivdois = document.getElementById('titulo');
         let indexy = 0;
 
-const net = 'Conexões ativas';
+const net = 'CONEXÕES ATIVAS';
  
         
         const typingTextDiv = document.getElementById('netw');
         let index = 0;
+
+ const men = 'HOUSTON CAMBIO :SEMPRE QUE FOR ! DESLIGANDO !';
+ 
         
+        const typingTextDivtres = document.getElementById('mensagem');
+        let indexm = 0;       
 
         function typeWriter() {
             if (index < net.length) {
@@ -152,8 +159,12 @@ const net = 'Conexões ativas';
                 indexy++;
                 setTimeout(typeWriter, 950); // Ajuste o tempo conforme necessário
             }
+            if (indexm < men.length) {
+                typingTextDivtres.textContent += men.charAt(indexm);
+                indexm++;
+                setTimeout(typeWriter, 950); // Ajuste o tempo conforme necessário
+            }
         }
-
         typeWriter();
 
 
