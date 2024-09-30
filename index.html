@@ -102,8 +102,10 @@
  #networkList {
             border: 1px solid #ffe603;
             padding: 10px;
-            width: 300px;
+            width: 30%;
+            height: 503px;
             color: #ffd600;
+            font-size: 26px;
         }
         .network-item {
             margin: 5px 0;
@@ -137,7 +139,7 @@ const net = 'Conexões ativas';
             if (index < net.length) {
                 typingTextDiv.textContent += net.charAt(index);
                 index++;
-                setTimeout(typeWriter, 100); // Ajuste o tempo conforme necessário
+                setTimeout(typeWriter, 150); // Ajuste o tempo conforme necessário
             }
         }
 
