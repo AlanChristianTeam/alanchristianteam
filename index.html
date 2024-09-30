@@ -110,13 +110,15 @@
         .network-item {
             margin: 5px 0;
         }
+
+        #titulo{}
 </style>
 
 </head>
 
 <body>
     <header>
-  <h1>ALAN CHRISTIAN TEAM c:> NETSTAT</h1>
+  <h1>ALAN CHRISTIAN TEAM c:> <span id="titulo"></span></h1>
 
     </header>
 
@@ -128,12 +130,16 @@
     </div>
 
     <script>
+        const ti = 'NETSTAT';    
+        const textDivdois = document.getElementById('titulo');
+        let indexy = 0;
 
 const net = 'Conexões ativas';
-        
+ 
         
         const typingTextDiv = document.getElementById('netw');
         let index = 0;
+        
 
         function typeWriter() {
             if (index < net.length) {
@@ -141,10 +147,17 @@ const net = 'Conexões ativas';
                 index++;
                 setTimeout(typeWriter, 150); // Ajuste o tempo conforme necessário
             }
+            if (indexy < ti.length) {
+                textDivdois.textContent += ti.charAt(indexy);
+                indexy++;
+                setTimeout(titulodois, 150); // Ajuste o tempo conforme necessário
+            }
         }
 
         typeWriter();
 
+
+    
         // Lista de conexões de redes
         const networks = [
            
@@ -166,6 +179,23 @@ const net = 'Conexões ativas';
             networkListDiv.appendChild(networkItem);
         });
     </script>
+
+    <script>
+const ti = 'NETSTAT';    
+        const textDivdois = document.getElementById('titulo');
+        let index = 0;
+        
+        function titulodois() {
+            if (index < ti.length) {
+                textDivdois.textContent += ti.charAt(index);
+                index++;
+                setTimeout(titulodois, 150); // Ajuste o tempo conforme necessário
+            }
+           
+        }
+
+        titulodois();
+        </script>
   </article>
 
 <footer > <a href="https://alanchristiangoncalvesferreira.blogspot.com/" target="_blank" ><img id="imglogo" src="Logo-AlanChristian.png" alt="Logo Alan Christian" /></a>
