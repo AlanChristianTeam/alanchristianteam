@@ -98,19 +98,72 @@
  color: #ffd600;
 
  }
+
+ #networkList {
+            border: 1px solid #ffe603;
+            padding: 10px;
+            width: 300px;
+            color: #ffd600;
+        }
+        .network-item {
+            margin: 5px 0;
+        }
 </style>
 
 </head>
 
 <body>
     <header>
-  <h1>ALAN CHRISTIAN TEAM c://> NETSTAT</h1>
+  <h1>ALAN CHRISTIAN TEAM c:> NETSTAT</h1>
 
     </header>
 
-  <article id="contentone">
+  <article id="contentone" >
+    <div id="networkList">
+   <h2 id="netw"></h2>
 
 
+    </div>
+
+    <script>
+
+const net = 'Conexões ativas';
+        
+        
+        const typingTextDiv = document.getElementById('netw');
+        let index = 0;
+
+        function typeWriter() {
+            if (index < net.length) {
+                typingTextDiv.textContent += net.charAt(index);
+                index++;
+                setTimeout(typeWriter, 100); // Ajuste o tempo conforme necessário
+            }
+        }
+
+        typeWriter();
+
+        // Lista de conexões de redes
+        const networks = [
+           
+            'Rede 1 América: Conectado',
+            'Rede 2 Japan: Conectado',
+            'Rede 3 Europe: Conectado',
+            'Rede 4 China: Conectado',
+            'Rede 5 África: Conectado'
+        ];
+
+        // Seleciona a div onde a lista será exibida
+        const networkListDiv = document.getElementById('networkList');
+
+        // Cria e adiciona os itens da lista na div
+        networks.forEach(network => {
+            const networkItem = document.createElement('div');
+            networkItem.className = 'network-item';
+            networkItem.textContent = network;
+            networkListDiv.appendChild(networkItem);
+        });
+    </script>
   </article>
 
 <footer > <a href="https://alanchristiangoncalvesferreira.blogspot.com/" target="_blank" ><img id="imglogo" src="Logo-AlanChristian.png" alt="Logo Alan Christian" /></a>
