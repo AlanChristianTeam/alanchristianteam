@@ -3,6 +3,7 @@
 <head>
 <title>Alan Christian Team</title>
 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
@@ -96,6 +97,7 @@
 
  h1{  
  color: #ffd600;
+ float: left;
 
  }
 
@@ -120,6 +122,28 @@
     padding: 4px;
         }
 
+   header{
+
+    width: 100%;
+    height: 100px;
+
+   }     
+
+.music{
+  width: 100px;
+  height: 50px;
+
+
+}
+
+#playmusic{
+    float: left;
+    margin: 0 0 0 57%;
+    clear: inline-end
+
+}
+
+
 </style>
 
 </head>
@@ -127,6 +151,27 @@
 <body>
     <header>
   <h1>ALAN CHRISTIAN TEAM c:> <span id="titulo"></span></h1>
+
+ <div id="playmusic">
+  <audio id="audioPlayer" controls autoplay>
+    <source src="semprequefor.mp3" type="audio/mpeg">
+   
+</audio>
+<br>
+<button class="music" onclick="playAudio()">Play</button>
+<button class="music"  onclick="pauseAudio()">Pause</button>
+</div>
+<script>
+    var audio = document.getElementById('audioPlayer');
+
+    function playAudio() {
+        audio.play();
+    }
+
+    function pauseAudio() {
+        audio.pause();
+    }
+</script>
 
     </header>
 
@@ -221,6 +266,7 @@ const ti = 'NETSTAT';
         </script>
   </article>
 
+  
 <footer > <a href="https://alanchristiangoncalvesferreira.blogspot.com/" target="_blank" ><img id="imglogo" src="Logo-AlanChristian.png" alt="Logo Alan Christian" /></a>
 
 <nav> 
